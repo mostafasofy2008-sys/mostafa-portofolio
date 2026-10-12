@@ -1042,3 +1042,101 @@ footer a:hover {
         height: 285px;
     }
 }
+
+/* Mobile responsive fixes */
+@media (max-width: 650px) {
+  .container {
+    width: calc(100% - 32px);
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: clamp(2.4rem, 10vw, 3.8rem);
+    line-height: 1;
+    letter-spacing: -1.5px;
+    overflow-wrap: break-word;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 8vw, 3rem);
+    line-height: 1.05;
+    letter-spacing: -1px;
+    overflow-wrap: break-word;
+  }
+
+  .hero-grid,
+  .two-col,
+  .section-top,
+  .projects-grid,
+  .skills-grid {
+    min-width: 0;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-grid {
+    gap: 40px;
+  }
+
+  .portrait-wrap {
+    width: min(100%, 320px);
+    justify-self: center;
+  }
+
+  .project-image {
+    aspect-ratio: 16 / 9;
+  }
+
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .project-info {
+    gap: 12px;
+  }
+
+  .service-list > div {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 12px;
+    padding: 24px 0;
+  }
+
+  .service-list strong,
+  .service-list p {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .cta {
+    padding: 75px 0;
+  }
+
+  .hero-actions,
+  .contact-actions {
+    gap: 12px;
+  }
+
+  .button {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  h1 {
+    font-size: clamp(2.1rem, 9.5vw, 2.6rem);
+  }
+
+  h2 {
+    font-size: clamp(1.8rem, 7.5vw, 2.3rem);
+  }
+
+  .eyebrow {
+    letter-spacing: 1.5px;
+    overflow-wrap: anywhere;
+  }
+}
