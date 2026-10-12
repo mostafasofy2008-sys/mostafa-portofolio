@@ -321,6 +321,39 @@ h2 span {
     color: var(--muted);
 
     font-size: 1rem;
+   
+/* Prevent horizontal overflow on mobile */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+.container {
+    min-width: 0;
+}
+
+.hero-grid,
+.projects-grid,
+.skills-grid,
+.two-col,
+.section-top {
+    min-width: 0;
+}
+
 
     line-height: 1.8;
 }
